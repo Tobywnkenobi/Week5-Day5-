@@ -13,7 +13,6 @@ INSERT INTO Cars (
 	'Red',
 	1
 );
-
 INSERT INTO Customers (
 	customer_id,
 	first_name,
@@ -29,7 +28,6 @@ INSERT INTO Customers (
 		1,
 		1
 );
-
 INSERT INTO staff (
 	staff_id,
 	first_name,
@@ -41,7 +39,6 @@ INSERT INTO staff (
 	'Markham',
 	'239 Dogwood Drive, Kents Store, Va'
 );
-
 INSERT INTO dealership (
 	store_id,
 	address,
@@ -51,7 +48,6 @@ INSERT INTO dealership (
 	'234 dealership ave, charlottesville, va',
 	7572542158
 );
-
 INSERT INTO Cars (
 	VIN_id,
 	Make,
@@ -67,7 +63,6 @@ INSERT INTO Cars (
 	'Red',
 	2
 );
-
 INSERT INTO Customers (
 	customer_id,
 	first_name,
@@ -83,7 +78,6 @@ INSERT INTO Customers (
 	2,
 	2
 );
-
 CREATE OR REPLACE PROCEDURE change_car(
 	make VARCHAR(30),
 	Model VARCHAR(30),
@@ -91,12 +85,9 @@ CREATE OR REPLACE PROCEDURE change_car(
 	) LANGUAGE plpgsql AS $$
 		BEGIN
 			UPDATE Customers
-			SET 
-				make = make AND 
-				Model = Model AND 
+			SET
+				make = make AND
+				Model = Model AND
 				Year_ = Year_;
 		END
 	$$;
-
-CALL Cars(change_car)
-		
