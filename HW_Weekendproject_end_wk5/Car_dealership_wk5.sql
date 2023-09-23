@@ -4,6 +4,16 @@ CREATE TABLE dealership(
 	phone_number VARCHAR(12)
 );
 
+CREATE TABLE Customers(
+	customer_id SERIAL PRIMARY KEY,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	address VARCHAR(150),
+	service_id INTEGER,
+	VIN_id INTEGER NOT NULL,
+	FOREIGN KEY(VIN_id) REFERENCES Cars(VIN_id)
+);
+
 CREATE TABLE Service_and_repair(
 	service_id SERIAL PRIMARY KEY,
 	staff_id INTEGER NOT NULL,
@@ -22,16 +32,6 @@ CREATE TABLE Cars(
 	Color TEXT,
 	service_id INTEGER
 );	
-
-CREATE TABLE Customers(
-	customer_id SERIAL PRIMARY KEY,
-	first_name VARCHAR(50),
-	last_name VARCHAR(50),
-	address VARCHAR(150),
-	service_id INTEGER,
-	VIN_id INTEGER NOT NULL,
-	FOREIGN KEY(VIN_id) REFERENCES Cars(VIN_id)
-);
 
 CREATE TABLE Cars_sold(
 	new_VIN_id SERIAL PRIMARY KEY,

@@ -98,5 +98,5 @@ CREATE OR REPLACE PROCEDURE change_car(
 		END
 	$$;
 
-CALL Cars 
+CALL Cars(change_car)
 		
