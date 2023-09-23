@@ -26,7 +26,7 @@ def high_low(numbers):
     return "{} {}".format(nums[-1], nums[0])    #returns the highest (last) and (lowest)first as a string
 
 print(high_low("1 2 3 4 5"))    
-print(high_low("1 2 -3 4 5"))   
+print(high_low("1 2 -3 4 5"))
 print(high_low("1 9 3 4 -5")) 
 '''
 Time complexity: for lines 25: O(n) - based on input length / list comprehension is O(n) / sorted (n). the return is O(1) constant based on the function. constant time.
